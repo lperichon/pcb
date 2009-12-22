@@ -5,7 +5,7 @@
     <%= f.input :id, :as => :hidden %>
     <%= f.input :guess, :as => :text %>
     <% f.buttons do %>
-      <%= f.commit_button :label => t('actions.submit') %>
+      <li><button class="awesome"><%= t('actions.submit') %></button></li>
       <li><%= link_to_function t('tests.edit.hint'), "alert('#{@card.answer}');" %></li>
     <% end %>
   <% end %>

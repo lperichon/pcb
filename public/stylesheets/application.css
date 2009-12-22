@@ -84,7 +84,7 @@ a {
   font-weight: bold;
 }
 
-/* begin awsome buttons */
+/* begin awesome buttons (http://www.zurb.com/blog_uploads/0000/0617/buttons-03.html) */
 .awesome, .awesome:visited {
   background: #222 url(/images/alert-overlay.png) repeat-x;
   display: inline-block;
@@ -118,7 +118,7 @@ a {
 .medium.awesome, .medium.awesome:visited {
   font-size: 13px;
   font-weight: bold;
-  line-height: 1;
+  line-height: 1em;
   text-shadow: 0 -1px 1px rgba(0, 0, 0, 0.25);
 }
 
