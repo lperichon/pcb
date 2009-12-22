@@ -71,4 +71,5 @@ es:
       hint: "Ayuda"
   application:
     title: "Preguntas del Curso Básico"
+    login: "Entrar"
 # end application
