@@ -1,0 +1,23 @@
+<% title Card.human_name(:count => 2) %>
+
+<table>
+  <tr>
+    <th><%= Card.human_attribute_name(:class_idx) %></th>
+    <th><%= Card.human_attribute_name(:question_idx) %></th>
+    <th><%= Card.human_attribute_name(:question) %></th>
+    <th><%= Card.human_attribute_name(:answer) %></th>
+  </tr>
+  <% for card in @cards %>
+    <tr>
+      <td><%=h card.class_idx %></td>
+      <td><%=h card.question_idx %></td>
+      <td><%=h card.question %></td>
+      <td><%=h card.answer %></td>
+      <td><%= link_to t('actions.show'), card %></td>
+      <td><%= link_to t('actions.edit'), edit_card_path(card) %></td>
+      <td><%= link_to t('actions.delete'), card, :confirm => t('actions.confirm_delete'), :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to t('cards.index.new_card'), new_card_path %></p>

@@ -1,0 +1,74 @@
+es:
+  this_file_language: 'Español'
+
+# begin ActiveRecord models & attributes
+  activerecord:
+    models:
+      card:
+        one: "Tarjeta"
+        other: "Tarjetas"
+    attributes:
+      card:
+        question: "Pregunta"
+        answer: "Respuesta"
+        guess: "Respuesta"
+        class_idx: "Clase"
+        question_idx: "Pregunta"
+# end ActiveRecord models & attributes
+
+# begin inherited_resources flash messages
+  flash:
+    actions:
+      create:
+        notice: "{{resource_name}} creado exitosamente!"
+        error: "{{resource_name}} no pudo ser creado."
+      update:
+        notice: "{{resource_name}} actualizado exitosamente!"
+        error: "{{resource_name}} no pudo ser actualizado."
+      destroy:
+        notice: "{{resource_name}} eliminado exitosamente!"
+        error: "{{resource_name}} no pudo ser eliminado."
+# end inherited_resources flash messages
+
+
+    tests:
+      update:
+        notice: "La respuesta fue correcta!"
+        error: "La respuesta fue incorrecta"# begin formtastic
+  formtastic:
+    yes: 'Si'
+    no: 'No'
+    create: 'Crear {{model}}'
+    save: 'Guardar {{model}}'
+    submit: 'Enviar {{model}}'
+    update: 'Actualizar {{model}}'
+    required: 'Requerido'
+# end formtastic
+
+# begin application
+  cards:
+    edit:
+      title: "Editando tarjeta"
+    new:
+      title: "Nueva tarjeta"
+    index:
+      new_card: "Nueva tarjeta"
+  actions:
+    edit: "Editar"
+    delete: "Eliminar"
+    show: "Mostrar"
+    view_all: "Ver todas"
+    back_to_list: "Volver a la lista"
+    confirm_delete: "¿Está Seguro?"
+    submit: "Enviar"
+  tests:
+    index:
+      start_test: "Comenzar"
+    show:
+      the_right_answer_was: "La respuesta correcta es"
+      next_card: "Próxima pregunta"
+    edit:
+      hint: "Ayuda"
+  application:
+    title: "Preguntas del Curso Básico"
+# end application

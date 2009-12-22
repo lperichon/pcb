@@ -1,0 +1,8 @@
+<% title t('cards.edit.title') %>
+
+<%= render :partial => 'form' %>
+
+<p>
+  <%= link_to t('actions.show'), @card %> |
+  <%= link_to t('actions.view_all'), cards_path %>
+</p>

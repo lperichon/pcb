@@ -1,0 +1,7 @@
+<% unless flash[:error].blank? %>
+  <%= t('tests.show.the_right_answer_was') %>:
+  <p><%= @card.answer %></p>
+<% end %>
+<p>
+  <%= link_to t('tests.show.next_card'), edit_test_path ,:class=>"large awesome" %>
+</p>

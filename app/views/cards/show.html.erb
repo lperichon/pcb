@@ -1,0 +1,24 @@
+<% title Card.human_name %>
+
+<p>
+  <span class='label'><%= Card.human_attribute_name(:class_idx) %>:</span>
+  <%=h @card.class_idx %>
+</p>
+<p>
+  <span class='label'><%= Card.human_attribute_name(:question_idx) %>:</span>
+  <%=h @card.question_idx %>
+</p>
+<p>
+  <span class='label'><%= Card.human_attribute_name(:question) %>:</span>
+  <%=h @card.question %>
+</p>
+<p>
+  <span class='label'><%= Card.human_attribute_name(:answer) %>:</span>
+  <%=h @card.answer %>
+</p>
+
+<p>
+  <%= link_to t('actions.edit'), edit_card_path(@card) %> |
+  <%= link_to t('actions.delete'), @card, :confirm => t('actions.confirm_delete'), :method => :delete %> |
+  <%= link_to t('actions.view_all'), cards_path %>
+</p>
