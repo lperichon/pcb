@@ -1,3 +1,8 @@
-<h1>Tests#index</h1>
-<p>Find me in app/views/tests/index.html.erb</p>
-<%= link_to t('tests.index.start_test'), edit_test_path ,:class=>"large awesome" %>
+<h1><%= t('tests.index.title') %></h1>
+<p><%= t('tests.index.instructions')%></p>
+<h2><%= t('tests.index.last_test_results') %></h2>
+<ul>
+  <li><%= t('tests.index.correct') %>: <%= @correct.size %></li>
+  <li><%= t('tests.index.incorrect') %>: <%= @incorrect.size %></li>
+</ul>
+<%= button_to t('tests.index.start_test'), test_path, :class=>"large awesome" %>

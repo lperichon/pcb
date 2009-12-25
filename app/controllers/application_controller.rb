@@ -10,4 +10,12 @@ class ApplicationController < ActionController::Base
   def logged_in?
     false
   end
+
+  # start over if test abandoned for more than 1 hour, or if there are no more incorrect or ananwered questions
+  def start_over?
+    ping = nil
+    ping = DateTime.parse(cookies[:ping]) if cookies[:ping]
+
+    return ping.nil? || ping < 1.hour.ago
+  end
 end

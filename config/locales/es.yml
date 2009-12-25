@@ -64,6 +64,11 @@ es:
   tests:
     index:
       start_test: "Comenzar"
+      title: "Test de preguntas del curso basico"
+      instructions: "Las instruccciones son simples. presione 'comenzar' y el test comienza"
+      last_test_results: "Resultados del último test"
+      correct: "Correctas"
+      incorrect: "Incorrectas"
     show:
       the_right_answer_was: "La respuesta correcta es"
       next_card: "Próxima pregunta"
