@@ -28,13 +28,23 @@ es:
       destroy:
         notice: "{{resource_name}} eliminado exitosamente!"
         error: "{{resource_name}} no pudo ser eliminado."
-# end inherited_resources flash messages
-
-
     tests:
       update:
         notice: "La respuesta fue correcta!"
-        error: "La respuesta fue incorrecta"# begin formtastic
+        error: "La respuesta fue incorrecta"
+    cards:
+      create:
+        notice: "La tarjeta fue creada exitosamente!"
+        error: "La tarjeta no pudo ser creada."
+      update:
+        notice: "La tarjeta fue actualizada exitosamente!"
+        error: "La tarjeta no pudo ser actualizada."
+      destroy:
+        notice: "La tarjeta fue eliminada exitosamente!"
+        error: "La tarjeta no pudo ser eliminada."
+# end inherited_resources flash messages
+
+# begin formtastic
   formtastic:
     yes: 'Si'
     no: 'No'
@@ -77,4 +87,16 @@ es:
   application:
     title: "Preguntas del Curso Básico"
     login: "Entrar"
+    signup: "Registrarse"
+    logout: "Salir"
+    welcome: "Bienvenido {{name}}!"
+    or: "o"
+  user_sessions:
+    new:
+      title: "Entrar"
+      login: "Entrar"
+    create:
+      notice: "Sesión iniciada exitosamente!"
+    destroy:
+      notice: "Sesión cerrada exitosamente!"
 # end application

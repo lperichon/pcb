@@ -9,7 +9,21 @@
     <%= yield(:head) %>
   </head>
   <body>
-    <div id='header'><div id='language_selection' class='menu'><%= language_selection %></div><div id='user_actions' class='menu'><%= link_to t('application.login') %></div></div>
+    <div id='header'>
+      <div id='language_selection' class='menu'><%= language_selection %></div>
+      <div id='user_actions' class='menu'>
+        <% if logged_in? %>
+          <%= t('application.welcome', :name => current_user.username) %>
+        <%= link_to t('application.logout'), logout_path %>
+        <% else %>
+          <% unless User.count > 0 %>
+            <%= link_to t('application.signup'), signup_path %> <%= t('application.or') %>
+          <% end %>
+        <%= link_to t('application.login'), login_path %>
+        <% end %>
+
+      </div>
+    </div>
     <div id="container">
       <%- flash.each do |name, msg| -%>
         <%= content_tag :div, msg, :id => "flash_#{name}" %>

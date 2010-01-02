@@ -1,0 +1,15 @@
+<% title t('user_sessions.new.title') %>
+<% unless User.count > 0 %>
+<p>Don't have an account? <%= link_to "Sign up!", signup_path %></p>
+<% end %>
+
+<% semantic_form_for @user_session do |f| %>
+  <%= f.error_messages %>
+  <% f.inputs do %>
+    <%= f.input :username %>
+    <%= f.input :password %>
+  <% end %>
+  <% f.buttons do %>
+    <%= f.commit_button :label => t('user_sessions.new.login') %>
+  <% end %>
+<% end %>

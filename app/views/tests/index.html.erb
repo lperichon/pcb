@@ -1,8 +1,10 @@
 <h1><%= t('tests.index.title') %></h1>
 <p><%= t('tests.index.instructions')%></p>
+<% if !@correct.blank? && !@incorrect.blank? %>
 <h2><%= t('tests.index.last_test_results') %></h2>
 <ul>
   <li><%= t('tests.index.correct') %>: <%= @correct.size %></li>
   <li><%= t('tests.index.incorrect') %>: <%= @incorrect.size %></li>
 </ul>
+<% end %>
 <%= button_to t('tests.index.start_test'), test_path, :class=>"large awesome" %>
