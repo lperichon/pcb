@@ -1,13 +1,4 @@
-<% title Card.human_name %>
-
-<p>
-  <span class='label'><%= Card.human_attribute_name(:class_idx) %>:</span>
-  <%=h @card.class_idx %>
-</p>
-<p>
-  <span class='label'><%= Card.human_attribute_name(:question_idx) %>:</span>
-  <%=h @card.question_idx %>
-</p>
+<% title text_label(@card) %>
 <p>
   <span class='label'><%= Card.human_attribute_name(:question) %>:</span>
   <%=h @card.question %>
