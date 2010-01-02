@@ -21,6 +21,8 @@ Rails::Initializer.run do |config|
   # config.gem "aws-s3", :lib => "aws/s3"
   config.gem 'formtastic'
   config.gem 'inherited_resources'
+  config.gem 'responders'
+  config.gem 'has_scope'
   config.gem 'authlogic'
 
   # Only load the plugins named here, in the order given (default is alphabetical).
