@@ -14,7 +14,8 @@
       <div id='user_actions' class='menu'>
         <% if logged_in? %>
           <%= t('application.welcome', :name => current_user.username) %>
-        <%= link_to t('application.logout'), logout_path %>
+          <%= link_to t('application.manage_cards'), cards_path%> <%= t('application.or') %>
+          <%= link_to t('application.logout'), logout_path %>
         <% else %>
           <% unless User.count > 0 %>
             <%= link_to t('application.signup'), signup_path %> <%= t('application.or') %>

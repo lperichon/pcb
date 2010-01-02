@@ -91,6 +91,7 @@ es:
     logout: "Salir"
     welcome: "Bienvenido {{name}}!"
     or: "o"
+    manage_cards: "Ver tarjetas"
   user_sessions:
     new:
       title: "Entrar"
