@@ -2,6 +2,7 @@
 
 <table>
   <tr>
+    <th><%= Card.human_attribute_name(:month_idx) %></th>
     <th><%= Card.human_attribute_name(:class_idx) %></th>
     <th><%= Card.human_attribute_name(:question_idx) %></th>
     <th><%= Card.human_attribute_name(:question) %></th>
@@ -9,6 +10,7 @@
   </tr>
   <% for card in @cards %>
     <tr>
+      <td><%=h t('date.month_names')[card.month_idx] %></td>
       <td><%=h card.class_idx %></td>
       <td><%=h card.question_idx %></td>
       <td><%=h card.question %></td>

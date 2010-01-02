@@ -1,6 +1,7 @@
 class CreateCards < ActiveRecord::Migration
   def self.up
     create_table :cards do |t|
+      t.integer :month_idx
       t.integer :class_idx
       t.integer :question_idx
       t.timestamps

@@ -21,6 +21,7 @@ ActiveRecord::Schema.define(:version => 20100102172812) do
   end
 
   create_table "cards", :force => true do |t|
+    t.integer  "month_idx"
     t.integer  "class_idx"
     t.integer  "question_idx"
     t.datetime "created_at"

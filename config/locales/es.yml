@@ -12,6 +12,7 @@ es:
         question: "Pregunta"
         answer: "Respuesta"
         guess: "Respuesta"
+        month_idx: "Mes"
         class_idx: "Clase"
         question_idx: "Pregunta"
 # end ActiveRecord models & attributes
