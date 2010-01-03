@@ -15,6 +15,7 @@ es:
         month_idx: "Mes"
         class_idx: "Clase"
         question_idx: "Pregunta"
+        standard: "Padrón"
 # end ActiveRecord models & attributes
 
 # begin inherited_resources flash messages

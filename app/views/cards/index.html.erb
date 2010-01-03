@@ -5,6 +5,7 @@
     <th><%= Card.human_attribute_name('month_idx') %></th>
     <th><%= Card.human_attribute_name('class_idx') %></th>
     <th><%= Card.human_attribute_name( 'question_idx' ) %></th>
+    <th><%= Card.human_attribute_name( 'standard' ) %></th>
     <th><%= Card.human_attribute_name( 'question' ) %></th>
     <th><%= Card.human_attribute_name( 'answer' ) %></th>
   </tr>
@@ -13,6 +14,7 @@
       <td><%=h t('date.month_names')[card.month_idx] %></td>
       <td><%=h card.class_idx %></td>
       <td><%=h card.question_idx %></td>
+      <td><%=h card.standard %></td>
       <td><%=h card.question %></td>
       <td><%=h card.answer %></td>
       <td><%= link_to t('actions.show'), card %></td>
