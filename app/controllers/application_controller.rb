@@ -9,7 +9,9 @@ class ApplicationController < ActionController::Base
   filter_parameter_logging :password
   
   helper_method :logged_in?, :current_user, :redirect_to_target_or_default
-
+  def logged_in?
+    false
+  end
   # start over if test abandoned for more than 1 hour, or if there are no more incorrect or ananwered questions
   def start_over?
     ping = nil
@@ -28,15 +30,12 @@ class ApplicationController < ActionController::Base
     @current_user = current_user_session && current_user_session.record
   end
 
-  def logged_in?
-    current_user
-  end
-
   def login_required
-    unless logged_in?
+    unless current_user
       flash[:error] = "You must first log in or sign up before accessing this page."
       store_target_location
       redirect_to login_url
+      return false
     end
   end
 

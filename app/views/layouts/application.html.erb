@@ -12,7 +12,7 @@
     <div id='header'>
       <div id='language_selection' class='menu'><%= language_selection %></div>
       <div id='user_actions' class='menu'>
-        <% if logged_in? %>
+        <% if current_user %>
           <%= t('application.welcome', :name => current_user.username) %>
           <%= link_to t('application.manage_cards'), cards_path%> <%= t('application.or') %>
           <%= link_to t('application.logout'), logout_path %>
