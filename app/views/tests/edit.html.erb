@@ -1,4 +1,4 @@
-<h1><%= Card.human_attribute_name(:class_idx) %> <%= @card.class_idx.to_s %> - <%= Card.human_attribute_name(:question_idx) %> <%= @card.question_idx.to_s %></h1>
+<h1><%= Card.human_attribute_name('class_idx') %> <%= @card.class_idx.to_s %> - <%= Card.human_attribute_name('question_idx') %> <%= @card.question_idx.to_s %></h1>
 <h2><%= @card.question %></h2>
 <% semantic_form_for @card, :url => test_path do |f|%>
   <% f.inputs do %>

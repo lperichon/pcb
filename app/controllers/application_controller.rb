@@ -8,7 +8,7 @@ class ApplicationController < ActionController::Base
   # Scrub sensitive parameters from your log
   filter_parameter_logging :password
   
-  helper_method :current_user, :logged_in?, :redirect_to_target_or_default
+  helper_method :logged_in?, :current_user, :redirect_to_target_or_default
 
   # start over if test abandoned for more than 1 hour, or if there are no more incorrect or ananwered questions
   def start_over?
