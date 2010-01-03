@@ -8,6 +8,8 @@ class ApplicationController < ActionController::Base
 
   # Scrub sensitive parameters from your log
   # filter_parameter_logging :password
+  # LP:strange fix... we have to duplicate this helper method call, even though it is in authentication.rb
+  helper_method :logged_in?
 
   # start over if test abandoned for more than 1 hour, or if there are no more incorrect or ananwered questions
   def start_over?
