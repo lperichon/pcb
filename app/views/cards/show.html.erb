@@ -1,10 +1,10 @@
 <% title text_label(@card) %>
 <p>
-  <span class='label'><%= Card.human_attribute_name(:question) %>:</span>
+  <span class='label'><%= Card.human_attribute_name( 'question' ) %>:</span>
   <%=h @card.question %>
 </p>
 <p>
-  <span class='label'><%= Card.human_attribute_name(:answer) %>:</span>
+  <span class='label'><%= Card.human_attribute_name( 'answer' ) %>:</span>
   <%=h @card.answer %>
 </p>
 

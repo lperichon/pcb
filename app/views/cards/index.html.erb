@@ -2,11 +2,11 @@
 
 <table>
   <tr>
-    <th><%= Card.human_attribute_name(:month_idx) %></th>
-    <th><%= Card.human_attribute_name(:class_idx) %></th>
-    <th><%= Card.human_attribute_name(:question_idx) %></th>
-    <th><%= Card.human_attribute_name(:question) %></th>
-    <th><%= Card.human_attribute_name(:answer) %></th>
+    <th><%= Card.human_attribute_name('month_idx') %></th>
+    <th><%= Card.human_attribute_name('class_idx') %></th>
+    <th><%= Card.human_attribute_name( 'question_idx' ) %></th>
+    <th><%= Card.human_attribute_name( 'question' ) %></th>
+    <th><%= Card.human_attribute_name( 'answer' ) %></th>
   </tr>
   <% for card in @cards %>
     <tr>
