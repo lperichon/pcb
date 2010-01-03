@@ -9,7 +9,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20100102172812) do
+ActiveRecord::Schema.define(:version => 20100103164644) do
 
   create_table "card_translations", :force => true do |t|
     t.string   "locale"
@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(:version => 20100102172812) do
     t.integer  "question_idx"
     t.datetime "created_at"
     t.datetime "updated_at"
+    t.boolean  "standard"
   end
 
   create_table "users", :force => true do |t|
